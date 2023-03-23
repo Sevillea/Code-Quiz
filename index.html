@@ -25,9 +25,11 @@
                   limit. Keep in mind that incorrect answers will penalize your
                   score/time by ten seconds!
                 </p>
+                <!-- Start Quiz  Btn -->
                 <button type = "button" id = "Begin-quiz-Btn" class = "btn">
                   Begin Quiz
                 </button>
+                <!-- Answer form -->
                 <form class = "answer-list">
                   <fieldset>
                     <legend id = "legend">Choose One Answer:</legend>
@@ -40,7 +42,18 @@
                     <input type = "checkbox" id = "answer-four" value="D">
                     <label for = "answer-four" id = "answer-four-label">Answer 4</label><br />
                   </fieldset>
+                  <button class = "btn" type = "submit" value = "submit"></button>
                 </form>
+
+                <p id = "answer-status"></p>
+
+                <form id = "scores">
+                  <h3 id = "score">Score:</h3>
+                  <label for = "initials">Enter Your Initials</label>
+                  <input type = "text" id = "initials" name = "initials" placeholder = "A.S">
+                </form>
+
+
 
             </div>
           </div>

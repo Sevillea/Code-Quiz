@@ -25,13 +25,17 @@ p {
   color: white;
   background-color: green;
   width: 25%;
-  margin: 20px:auto;
+  margin: 20px;
 }
 
 #Begin-quiz-Btn {
   margin-top:80px;
 
   
+}
+
+#scores {
+  margin-top:125px;
 }
 
 
