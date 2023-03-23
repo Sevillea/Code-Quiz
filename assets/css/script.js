@@ -1,5 +1,12 @@
+// Globals:
 const timerEl = document.getElementById("timer");
 const timerCard = document.querySelector(".timer-card");
+
+// Event Listeners:
+startBtn.addEventListener("click", startQuiz);
+form.addEventListener("submit", getResponse);
+initialsInput.addEventListener("submit", saveScore);
+restartBtn.addEventListener("click", restartQuiz);
 
 //Set Timer Function to change color on count down depending on how many seconds are left:
 
@@ -241,3 +248,4 @@ function restartQuiz(e){
     restartBtn.style.display = "none";
     form.style.display = "initial";
 }
+
