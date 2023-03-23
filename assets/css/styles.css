@@ -10,4 +10,10 @@ body {
   text-align:center;
 }
 
+.card {
+  background-color: bisque
+}
 
+p {
+  font-size:20px;
+}
