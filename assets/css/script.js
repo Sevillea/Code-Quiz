@@ -99,5 +99,13 @@ const answerKey = [
     { answer: "B"},
 ];
 
-
+function nextQuestion(){
+    if (currentIndex < qAndA.length - 1){
+        currentIndex++;
+        questionDispFunc();
+    }
+    else {
+        gameOver();
+    }
+}
 
