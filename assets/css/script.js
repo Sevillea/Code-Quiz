@@ -74,8 +74,19 @@ const qAndA = [
         D: "It's a code used to signal the help of other coders in the area"
     },
     {
-        q:
-    }
+        q: "What is Bootstrap?",
+        A: "The things I pull myself up by",
+        B: "A JavaScript framework",
+        C: "A HTML library",
+        D: "A CSS library"
+    },
+    {
+        q: "What command do I need to run my React app?",
+        A: "NPM build",
+        B: "NPM Start",
+        C: "NPM Install",
+        D: "NPM Run Build"
+    },
 
-]
+];
 
