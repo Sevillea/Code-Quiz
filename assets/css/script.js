@@ -168,6 +168,7 @@ function getHighScores(){
     }
 }
 
+// Function to save score and enter their initials. User is alterted if input is less than two characters.
 function saveScore(e) {
     e.preventDefault();
     if(initialsInput.value.length === 2){
@@ -182,5 +183,29 @@ function saveScore(e) {
     else {
         alert("You must enter at least two characters");
     }
+}
+
+// Display high Scores on page, default display and function to display following game:
+restartBtn.style.display = "none";
+
+
+funtion displayHighScores(){
+    initialsInput.style.display = "none";
+    highScoresList.style.display = "none";
+    highScoresTitle.style.display = "block";
+    highScoresList.textContent = "";
+
+    highScores.sort(compare).reverse();
+
+    for (let i = =; i < highScores.length; i++){
+        let li = document.createElement("li");
+
+        li.id = i;
+        li.innerHTML = `Initials: ${highScores[i].Initials} Score: ${highScores[i].Score}`;
+        highScoresList.append(li);
+    }
+
+    restartBtn.style.display = "block";
+
 }
 
