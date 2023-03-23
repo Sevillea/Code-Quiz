@@ -62,10 +62,20 @@ const qAndA = [
     {
         q: "What does html stand for?",
         A: "Ham, Tomato Mustard, Leek?",
-        B: "How do You like My Lasagna?"
-        C: "Hyper Text Markup Language"
+        B: "How do You like My Lasagna?",
+        C: "Hyper Text Markup Language",
         D: "Hi Tom, My Lady"
     },
-    
+    {
+        q: "What does CSS do?",
+        A: "Adds style my HTML",
+        B: "Adds functionality to my web page",
+        C: "Creates a server for my web page",
+        D: "It's a code used to signal the help of other coders in the area"
+    },
+    {
+        q:
+    }
+
 ]
 
