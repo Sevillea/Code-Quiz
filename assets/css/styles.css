@@ -17,3 +17,19 @@ body {
 p {
   font-size:20px;
 }
+
+.btn {
+  display:flex;
+  justify-content:center;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+  width: 25%;
+  margin: 20px:auto;
+}
+
+#Begin-quiz-Btn {
+  margin-top:80px;
+
+  
+}
