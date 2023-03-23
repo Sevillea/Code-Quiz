@@ -125,7 +125,7 @@ function questionDispFunc() {
 
 
 }
-
+// Compares user selection to answers (array):
 function answerFunc(){
     if ( response === answerKey[currentIndex].answer){
         nextQuestion();
@@ -138,3 +138,20 @@ function answerFunc(){
 
     }
 }
+// initials input display set to none by default:
+initialsInput.styles.display = "none";
+
+// function to reset once game ends:
+function gameOver(){
+    clearInterval(timerInterval);
+    form.style.display = "none";
+    questionDisplay.style.display = "none";
+    timerCard.style.display = "none";
+    answerStatus.style.display = "none";
+    initialsInput.style.display = "block";
+    scoreDisplay.textContent = `Your Score is ${timerEl.innerText}!` ;
+
+}
+
+
+
