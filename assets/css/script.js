@@ -208,7 +208,7 @@ function displayHighScores(){
     restartBtn.style.display = "block";
 
 }
-
+// function to compare high scores:
 function compare(a,b){
     const scoreA = a.score;
     const scoreB = b.score;
@@ -223,3 +223,21 @@ function compare(a,b){
     return comparison;
 }
 
+// Restarting the Quiz:
+
+function restartQuiz(e){
+    e.preventDefault();
+    secondsLeft = 60;
+    setTimer();
+    currentIndex = 0;
+    highScoresList = "none";
+    highScoresTitle = "none";
+    timerCard.style.display = "block";
+    questionDisplay.style.display = "block";
+
+    questionDispFunc();
+    document.getElementById("header").innerText = "";
+    startBtn.style.display = "none";
+    restartBtn.style.display = "none";
+    form.style.display = "initial";
+}
