@@ -1,6 +1,13 @@
 body {
   font-family: Arial;
   font-size: 120%;
+  background-color: grey;
+  letter-spacing:1px;
+}
+
+.container {
+  margin-top:150px;
+  text-align:center;
 }
 
 a {
