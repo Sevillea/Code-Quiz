@@ -27,6 +27,9 @@ let timerInterval;
 // const questionDisplay = document.GetElementById("question-here");
 
 const startBtn = document.getElementById("Begin-quiz-btn");
+const answerStatus = document.getElementById("answer-status");
+const instructions = document.getElementById("instructions");
+
 // function to start Quiz:
 function startQuiz(){
     setTimer();
@@ -36,3 +39,16 @@ function startQuiz(){
     startBtn.style.display = "initial";
     answerStatus.style.dispaly = "initial"
 }
+
+const form = document.querySelector(".answer-list");
+
+// Function for answer choices from form:
+function getResponse(e) {
+    e.preventDefault();
+    response = form.answer.value;
+    answerFunc();
+}
+
+// INcorrect answers:
+
+
