@@ -24,6 +24,7 @@ function setTimer() {
 }
 
 let timerInterval;
+
 // const questionDisplay = document.GetElementById("question-here");
 
 const startBtn = document.getElementById("Begin-quiz-btn");
@@ -49,6 +50,22 @@ function getResponse(e) {
     answerFunc();
 }
 
+let secondsLeft; 
 // INcorrect answers:
+function incorrectAnswer() {
+    secondsLeft -= 15;
+    timerEl.textContent = secondsLeft;
+}
 
+// Q&A Choices:
+const qAndA = [
+    {
+        q: "What does html stand for?",
+        A: "Ham, Tomato Mustard, Leek?",
+        B: "How do You like My Lasagna?"
+        C: "Hyper Text Markup Language"
+        D: "Hi Tom, My Lady"
+    },
+    
+]
 
