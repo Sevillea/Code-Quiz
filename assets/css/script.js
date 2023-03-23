@@ -109,3 +109,15 @@ function nextQuestion(){
     }
 }
 
+const questionDisplay = document.getElementById("question");
+
+function questionDispFunc() {
+    questionDisplay.textContent = qAndA[currentIndex].q;
+    document.getElementById("answer-one-label").innerText = qAndA[currentIndex].A;
+    document.getElementById("answer-two-label").innerText = qAndA[currentIndex].B;
+    document.getElementById("answer-three-label").innerText = [currentIndex].C;
+    document.getElementById("answer-four-label").innerText = [currentIndex].D;
+
+
+}
+
