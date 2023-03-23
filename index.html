@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <main>
     <div class = "container">
       <div class = "row">
         <div class = "col"></div>
@@ -63,47 +64,40 @@
                 <button type = "button" id = "restart-btn" class = "btn">
                   Restart Quiz
                 </button>
-
-
-
-
-
-
-
+            </div>
+          </div>
+        </div>
+        <div class = "col-md-3 col-sm-12">
+          <div class= "card-timer-card">
+            <div class = "card-body">
+              <h2 class = "card-title timer-title">Seconds Left:</h2>
+              <h1 id = "timer">60</h1>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="scores"><a href="highscores.html">View Highscores</a></div>
+    </main>
 
-    <div class="timer">Time: <span id="time">0</span></div>
-
-    <div class="wrapper">
-      <div id="start-screen" class="start">
-
-
-
-
-        <button id="start">Start Quiz</button>
-      </div>
-
-      <div id="questions" class="hide">
-        <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
-      </div>
-
-      <div id="end-screen" class="hide">
-        <h2>All done!</h2>
-        <p>Your final score is <span id="final-score"></span>.</p>
-        <p>
-          Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
-        </p>
-      </div>
-
-      <div id="feedback" class="feedback hide"></div>
-    </div> -->
+    <!-- Bootstrap CDN -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper.js CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    
 
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/logic.js"></script>
