@@ -189,7 +189,7 @@ function saveScore(e) {
 restartBtn.style.display = "none";
 
 
-funtion displayHighScores(){
+function displayHighScores(){
     initialsInput.style.display = "none";
     highScoresList.style.display = "none";
     highScoresTitle.style.display = "block";
@@ -197,7 +197,7 @@ funtion displayHighScores(){
 
     highScores.sort(compare).reverse();
 
-    for (let i = =; i < highScores.length; i++){
+    for (let i = 0; i < highScores.length; i++){
         let li = document.createElement("li");
 
         li.id = i;
@@ -207,5 +207,19 @@ funtion displayHighScores(){
 
     restartBtn.style.display = "block";
 
+}
+
+function compare(a,b){
+    const scoreA = a.score;
+    const scoreB = b.score;
+    let comparison = 0;
+
+    if (scoreA > scoreB){
+        comparison = 1;
+    }
+    else if (scoreA < scoreB){
+        comparison = -1;
+    }
+    return comparison;
 }
 
