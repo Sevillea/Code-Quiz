@@ -153,5 +153,14 @@ function gameOver(){
 
 }
 
-
+let highScores;
+function getHighScores(){
+    const savedHighScores = JSON.parse(localStorage.getItem("highScores"));
+    if(savedHighScores){
+        highScores = savedHighScores;
+    }
+    else {
+        highScores = [];
+    }
+}
 
