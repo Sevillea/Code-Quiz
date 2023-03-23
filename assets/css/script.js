@@ -152,7 +152,11 @@ function gameOver(){
     scoreDisplay.textContent = `Your Score is ${timerEl.innerText}!` ;
 
 }
+// High scores set to default none:
+highScoresList.style.display = "none";
+highScoresTitle.style.display = "none";
 
+// Check local storage for high score and then responsd:
 let highScores;
 function getHighScores(){
     const savedHighScores = JSON.parse(localStorage.getItem("highScores"));
@@ -161,6 +165,22 @@ function getHighScores(){
     }
     else {
         highScores = [];
+    }
+}
+
+function saveScore(e) {
+    e.preventDefault();
+    if(initialsInput.value.length === 2){
+        let hsInitials = initials.value.toUpperCase();
+        let hsScore = timerEl.innerText;
+
+        highScores.push({ Initials: hsInitials, Score: hsScore});
+        localStorage.setitem("highScores", JSON.stringify(highScores));
+
+        displayHighScores();
+    }
+    else {
+        alert("You must enter at least two characters");
     }
 }
 
