@@ -99,6 +99,10 @@ const answerKey = [
     { answer: "B"},
 ];
 
+let currentIndex = 0;
+let response = "";
+
+
 function nextQuestion(){
     if (currentIndex < qAndA.length - 1){
         currentIndex++;
@@ -109,6 +113,7 @@ function nextQuestion(){
     }
 }
 
+// Current Q&A Choices display:
 const questionDisplay = document.getElementById("question");
 
 function questionDispFunc() {
@@ -121,3 +126,15 @@ function questionDispFunc() {
 
 }
 
+function answerFunc(){
+    if ( response === answerKey[currentIndex].answer){
+        nextQuestion();
+        answerStatus.style.display = "none";
+    }
+    else {
+        answerStatus.style.display = "block"
+        answerStatus.textContent = "Oops, nearly there! Try again";
+        incorrectAnswer();
+
+    }
+}

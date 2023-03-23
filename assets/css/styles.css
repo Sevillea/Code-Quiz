@@ -24,10 +24,12 @@ p {
   background-color: green;
   width: 25%;
   margin: 20px;
+  cursor:pointer;
 }
 
 #Begin-quiz-Btn {
   margin-top:80px;
+  cursor:pointer;
 
   
 }
