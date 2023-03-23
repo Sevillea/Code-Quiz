@@ -1,5 +1,7 @@
 const timerEl = document.getElementById("timer");
-const timerCard = documentGetElementById("timer-card");
+const timerCard = document.querySelector(".timer-card");
+
+//Set Timer Function to change color on count down depending on how many seconds are left:
 
 function setTimer() {
     secondsLeft = 60;
@@ -19,4 +21,18 @@ function setTimer() {
             gameOver();
         }
     })
+}
+
+let timerInterval;
+// const questionDisplay = document.GetElementById("question-here");
+
+const startBtn = document.getElementById("Begin-quiz-btn");
+// function to start Quiz:
+function startQuiz(){
+    setTimer();
+    questionDispFunc();
+    document.getElementById("header").innerText = "";
+    instructions.style.display = "none";
+    startBtn.style.display = "initial";
+    answerStatus.style.dispaly = "initial"
 }
