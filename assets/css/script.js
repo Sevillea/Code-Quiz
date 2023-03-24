@@ -206,9 +206,6 @@ function saveScore(e) {
     }
 }
 
-
-
-
 function displayHighScores(){
     initialsInput.style.display = "none";
     highScoresList.style.display = "none";
