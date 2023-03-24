@@ -1,12 +1,7 @@
 // Globals:
 const timerEl = document.getElementById("timer");
 const timerCard = document.querySelector(".timer-card");
-
-// Event Listeners:
-startBtn.addEventListener("click", startQuiz);
-form.addEventListener("submit", getResponse);
-initialsInput.addEventListener("submit", saveScore);
-restartBtn.addEventListener("click", restartQuiz);
+const questionDisplay = document.getElementById("question");
 
 //Set Timer Function to change color on count down depending on how many seconds are left:
 
@@ -121,7 +116,7 @@ function nextQuestion(){
 }
 
 // Current Q&A Choices display:
-const questionDisplay = document.getElementById("question");
+
 
 function questionDispFunc() {
     questionDisplay.textContent = qAndA[currentIndex].q;
@@ -146,7 +141,7 @@ function answerFunc(){
     }
 }
 // initials input display set to none by default:
-initialsInput.styles.display = "none";
+initialsInput.style.display = "none";   
 
 // function to reset once game ends:
 function gameOver(){
@@ -248,4 +243,10 @@ function restartQuiz(e){
     restartBtn.style.display = "none";
     form.style.display = "initial";
 }
+
+// Event Listeners:
+startBtn.addEventListener("click", startQuiz);
+form.addEventListener("submit", getResponse);
+initialsInput.addEventListener("submit", saveScore);
+restartBtn.addEventListener("click", restartQuiz);
 
