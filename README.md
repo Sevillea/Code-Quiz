@@ -27,4 +27,8 @@ The timer will change colors according to:
  
  Link to deployed Quiz:
  
+ Image of Quiz:
+ 
+ <img width="593" alt="Screenshot 2023-03-24 at 11 07 31" src="https://user-images.githubusercontent.com/109441410/227504949-09642d15-4121-4f05-bc34-d68feef23422.png">
+ 
  
