@@ -1,7 +1,24 @@
 // Globals:
 const timerEl = document.getElementById("timer");
-const timerCard = document.querySelector(".timer-card");
-const questionDisplay = document.getElementById("question");
+const timerCard = document.querySelector(".card-timer-card");
+const questionDisplay = document.getElementById("Question");
+const initialsInput = document.getElementById("score");
+const highScoresList = document.querySelector(".high-score");
+const highScoresTitle = document.getElementById("high-scores-title");
+const restartBtn = document.getElementById("restart-btn");
+
+
+let timerInterval;
+let userScore = 0;
+let secondsLeft; 
+
+// High scores set to default none:
+highScoresList.style.display = "none";
+highScoresTitle.style.display = "none";
+
+// Display high Scores on page, default display and function to display following game:
+restartBtn.style.display = "none";
+
 
 //Set Timer Function to change color on count down depending on how many seconds are left:
 
@@ -22,28 +39,31 @@ function setTimer() {
         if (secondsLeft<= 0){
             gameOver();
         }
-    })
+    }), 1000;
 }
 
-let timerInterval;
+
 
 // const questionDisplay = document.GetElementById("question-here");
 
-const startBtn = document.getElementById("Begin-quiz-btn");
+const startBtn = document.getElementById("Begin-quiz-Btn");
 const answerStatus = document.getElementById("answer-status");
 const instructions = document.getElementById("instructions");
 
 // function to start Quiz:
 function startQuiz(){
+    timerCard.style.display = "block";
     setTimer();
     questionDispFunc();
     document.getElementById("header").innerText = "";
     instructions.style.display = "none";
     startBtn.style.display = "initial";
-    answerStatus.style.dispaly = "initial"
+    form.style.display = "initial";
+    answerStatus.style.display = "initial";
 }
 
 const form = document.querySelector(".answer-list");
+const scoreDisplay = document.getElementById("score");
 
 // Function for answer choices from form:
 function getResponse(e) {
@@ -52,8 +72,8 @@ function getResponse(e) {
     answerFunc();
 }
 
-let secondsLeft; 
-// INcorrect answers:
+
+// Incorrect answers:
 function incorrectAnswer() {
     secondsLeft -= 15;
     timerEl.textContent = secondsLeft;
@@ -154,11 +174,10 @@ function gameOver(){
     scoreDisplay.textContent = `Your Score is ${timerEl.innerText}!` ;
 
 }
-// High scores set to default none:
-highScoresList.style.display = "none";
-highScoresTitle.style.display = "none";
 
 // Check local storage for high score and then responsd:
+
+
 let highScores;
 function getHighScores(){
     const savedHighScores = JSON.parse(localStorage.getItem("highScores"));
@@ -187,8 +206,7 @@ function saveScore(e) {
     }
 }
 
-// Display high Scores on page, default display and function to display following game:
-restartBtn.style.display = "none";
+
 
 
 function displayHighScores(){
@@ -250,3 +268,4 @@ form.addEventListener("submit", getResponse);
 initialsInput.addEventListener("submit", saveScore);
 restartBtn.addEventListener("click", restartQuiz);
 
+getHighScores();
