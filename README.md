@@ -27,7 +27,8 @@ The timer will change colors according to:
  
  
  Link to deployed Quiz:
- 
+
+https://sevillea.github.io/Code-Quiz/  
  
  
  ## Image of Quiz:
